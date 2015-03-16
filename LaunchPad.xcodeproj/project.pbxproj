@@ -10,6 +10,7 @@
 		9B1B69BC1AB74AD900B26334 /* LaunchPad.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B1B69BB1AB74AD900B26334 /* LaunchPad.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9B1B69C21AB74AD900B26334 /* LaunchPad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B1B69B61AB74AD900B26334 /* LaunchPad.framework */; };
 		9B1B69C91AB74AD900B26334 /* LaunchPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B69C81AB74AD900B26334 /* LaunchPadTests.swift */; };
+		9B1B69D31AB74AF800B26334 /* LaunchPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1B69D21AB74AF800B26334 /* LaunchPad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		9B1B69C11AB74AD900B26334 /* LaunchPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaunchPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B1B69C71AB74AD900B26334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B1B69C81AB74AD900B26334 /* LaunchPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchPadTests.swift; sourceTree = "<group>"; };
+		9B1B69D21AB74AF800B26334 /* LaunchPad.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchPad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		9B1B69B81AB74AD900B26334 /* LaunchPad */ = {
 			isa = PBXGroup;
 			children = (
+				9B1B69D21AB74AF800B26334 /* LaunchPad.swift */,
 				9B1B69BB1AB74AD900B26334 /* LaunchPad.h */,
 				9B1B69B91AB74AD900B26334 /* Supporting Files */,
 			);
@@ -209,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B1B69D31AB74AF800B26334 /* LaunchPad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +323,7 @@
 		9B1B69CD1AB74AD900B26334 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -328,12 +333,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		9B1B69CE1AB74AD900B26334 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
